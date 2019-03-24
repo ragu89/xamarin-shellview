@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:ShellViewForms" 
+    x:Class="ShellViewForms.ShellView"
+    Route="myshellview"
+    RouteHost="www.ragu89.ch"
+    RouteScheme="ragu"
+    Title="Ragu ShellView"
+    Visual="Material">
+        
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <StackLayout HorizontalOptions="Fill"
+                         VerticalOptions="Fill"
+                         BackgroundColor="#c7c7c7"
+                         Padding="16,48,16,16">
+                <Label FontSize="Medium"
+                       Text="Header"
+                       Margin="0" />
+                <Button Text="Button 1"
+                        Margin="0,16,0,0"
+                        BackgroundColor="{StaticResource PrimaryColor}"/>
+                <Button Text="Button 2"
+                        Margin="0,8,0,0"
+                        BackgroundColor="{StaticResource PrimaryColor}" />
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+    
+    <ShellItem Title="Home" > 
+        
+        <ShellSection>
+            <ShellContent>
+                <local:HomePage />
+            </ShellContent>
+        </ShellSection>
+    </ShellItem>
+    
+    <ShellContent Title="Second Page"
+                  ContentTemplate="{DataTemplate local:SecondPage}"
+                  Route="secondpage" />
+    
+</Shell>

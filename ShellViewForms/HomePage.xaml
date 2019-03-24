@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="ShellViewForms.HomePage"
+    Visual="Material">
+    
+    <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+        <Label Text="Home page" />
+        <Button Text="Open Hamburger Menu"
+                BackgroundColor="{StaticResource PrimaryColor}"
+                Clicked="OpenMenuButton_Clicked" />
+        <Button Text="Navigate to Second Page" 
+                BackgroundColor="{StaticResource PrimaryColor}"
+                Clicked="NavigateButton_Clicked" />
+    </StackLayout>
+
+</ContentPage>
